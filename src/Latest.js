@@ -21,7 +21,7 @@ class Latest extends Component {
       <>
         <Header></Header>
         {!!this.state.comicData ? (
-          <img src={this.state.comicData.img}></img>
+          <img className="latestImage" src={this.state.comicData.img}></img>
         ) : null}
       </>
     );
