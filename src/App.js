@@ -1,10 +1,13 @@
-import React from 'react';
+import React from "react";
+import { BrowserRouter as Router, Route } from "react-router-dom";
+
+import Latest from "./Latest";
 
 function App() {
   return (
-    <div>
-      <p>Hello World</p>
-    </div>
+    <Router>
+      <Route path="/latest" exact component={Latest} />
+    </Router>
   );
 }
 
