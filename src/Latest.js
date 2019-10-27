@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import "./stylesheets/Latest.css";
 
 import Header from "./Header";
 
@@ -21,7 +22,11 @@ class Latest extends Component {
       <>
         <Header></Header>
         {!!this.state.comicData ? (
-          <img className="latestImage" src={this.state.comicData.img}></img>
+          <img
+            className="latestImage"
+            title={this.state.comicData.alt}
+            src={this.state.comicData.img}
+          ></img>
         ) : null}
       </>
     );
