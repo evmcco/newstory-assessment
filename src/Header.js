@@ -6,7 +6,7 @@ function Header() {
     <>
       <div className="header">
         <span className="latest">
-          <a href="/latest">Latest</a>
+          <a href="/">Latest</a>
         </span>
         <span href="/search" className="search">
           <a href="/search">Search</a>
