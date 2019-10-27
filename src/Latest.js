@@ -2,11 +2,10 @@ import React, { Component } from "react";
 import "./stylesheets/Latest.css";
 
 import Header from "./Header";
+import ComicInfo from "./ComicInfo";
 
 class Latest extends Component {
-  state = {
-    comicData: {}
-  };
+  state = {};
 
   async componentDidMount() {
     const response = await fetch("https://xkcd.now.sh/?comic=latest");
@@ -22,11 +21,16 @@ class Latest extends Component {
       <>
         <Header></Header>
         {!!this.state.comicData ? (
-          <img
-            className="latestImage"
-            title={this.state.comicData.alt}
-            src={this.state.comicData.img}
-          ></img>
+          <>
+            <ComicInfo comicData={this.state.comicData}></ComicInfo>
+            <a target="_blank" href="https://www.xkcd.com/">
+              <img
+                className="latestImage"
+                title={this.state.comicData.alt}
+                src={this.state.comicData.img}
+              ></img>
+            </a>
+          </>
         ) : null}
       </>
     );

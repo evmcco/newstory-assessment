@@ -3,10 +3,10 @@ import React, { Component } from "react";
 import "./stylesheets/Search.css";
 
 import Header from "./Header";
+import ComicInfo from "./ComicInfo";
 
 class Search extends Component {
   state = {
-    comicData: {},
     searchText: ""
   };
 
@@ -46,7 +46,15 @@ class Search extends Component {
           </button>
         </div>
         {!!this.state.comicData ? (
-          <img className="searchImage" src={this.state.comicData.img}></img>
+          <>
+            <ComicInfo comicData={this.state.comicData}></ComicInfo>
+            <a
+              target="_blank"
+              href={`https://www.xkcd.com/${this.state.comicData.num}/`}
+            >
+              <img className="searchImage" src={this.state.comicData.img}></img>
+            </a>
+          </>
         ) : null}
       </>
     );

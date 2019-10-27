@@ -1,9 +1,7 @@
 .searchForm {
   align-items: center;
   display: flex;
-  /* flex-direction: column; */
   margin: 36px;
-  /* width: 400px; */
 }
 
 .searchInput {
@@ -32,6 +30,5 @@
 
 .searchImage {
   margin: 24px 0 0 36px;
-  max-width: 1000px;
-  width: 90%;
+  max-width: 90%;
 }
