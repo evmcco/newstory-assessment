@@ -1,16 +1,35 @@
+body {
+  margin: 0;
+}
+
+.header-border {
+  background: linear-gradient(
+    90deg,
+    rgb(50, 195, 206) 0%,
+    rgb(252, 69, 243) 100%
+  );
+  height: 53px;
+  top: 0;
+  width: 100%;
+}
+
 .header {
-  padding: 12px;
+  align-items: center;
+  background-color: white;
+  height: 50px;
+  display: flex;
+  top: 0;
   width: 100%;
 }
 
 .header span {
   font-size: 1.5rem;
-  margin: 0 12px;
+  margin: 12px;
   padding: 12px 12px;
 }
 
 .header span:hover {
-  background-color: whitesmoke;
+  transform: scale(1.1);
 }
 
 a {

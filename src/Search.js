@@ -35,7 +35,7 @@ class Search extends Component {
         <Header></Header>
         <div className="searchForm">
           <input
-            placeholder="Search"
+            placeholder="Enter Comic #"
             onChange={this.handleSearchChange}
             className="searchInput"
             type="text"
@@ -54,6 +54,7 @@ class Search extends Component {
             >
               <img
                 title={this.state.comicData.alt}
+                alt={this.state.comicData.title}
                 className="searchImage"
                 src={this.state.comicData.img}
               ></img>

@@ -27,6 +27,7 @@ class Latest extends Component {
               <img
                 className="latestImage"
                 title={this.state.comicData.alt}
+                alt={this.state.comicData.title}
                 src={this.state.comicData.img}
               ></img>
             </a>
