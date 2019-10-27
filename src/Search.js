@@ -52,7 +52,11 @@ class Search extends Component {
               target="_blank"
               href={`https://www.xkcd.com/${this.state.comicData.num}/`}
             >
-              <img className="searchImage" src={this.state.comicData.img}></img>
+              <img
+                title={this.state.comicData.alt}
+                className="searchImage"
+                src={this.state.comicData.img}
+              ></img>
             </a>
           </>
         ) : null}
