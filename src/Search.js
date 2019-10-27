@@ -27,13 +27,21 @@ class Search extends Component {
     } catch {
       window.alert("Comic not found 😭 Please try again.");
     }
+    this.setState({
+      searchText: ""
+    });
+  };
+
+  handleSubmit = e => {
+    e.preventDefault();
+    this.searchComic();
   };
 
   render() {
     return (
       <>
         <Header></Header>
-        <div className="searchForm">
+        <form onSubmit={this.handleSubmit} className="searchForm">
           <input
             placeholder="Enter Comic #"
             onChange={this.handleSearchChange}
@@ -41,10 +49,10 @@ class Search extends Component {
             type="text"
             value={this.state.searchText}
           ></input>
-          <button onClick={this.searchComic} className="searchSubmit">
+          <button type="submit" className="searchSubmit">
             Search
           </button>
-        </div>
+        </form>
         {!!this.state.comicData ? (
           <>
             <ComicInfo comicData={this.state.comicData}></ComicInfo>
