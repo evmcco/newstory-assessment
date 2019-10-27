@@ -16,7 +16,6 @@ class Search extends Component {
 
   searchComic = async () => {
     const url = `https://xkcd.now.sh/?comic=${this.state.searchText}`;
-    console.log(`search at ${url}`);
     const response = await fetch(url);
     const comicData = await response.json();
     this.setState({

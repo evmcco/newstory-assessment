@@ -1,0 +1,22 @@
+.header {
+  padding: 12px;
+  width: 100%;
+}
+
+.header span {
+  font-size: 1.5rem;
+  margin: 0 12px;
+  padding: 12px 12px;
+}
+
+.header span:hover {
+  background-color: whitesmoke;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:visited {
+  color: black;
+}
