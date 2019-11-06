@@ -10,7 +10,6 @@ class Latest extends Component {
   async componentDidMount() {
     const response = await fetch("https://xkcd.now.sh/?comic=latest");
     const comicData = await response.json();
-    console.log(comicData);
     this.setState({
       comicData
     });
@@ -19,17 +18,17 @@ class Latest extends Component {
   render() {
     return (
       <>
-        <Header></Header>
+        <Header />
         {!!this.state.comicData ? (
           <>
-            <ComicInfo comicData={this.state.comicData}></ComicInfo>
+            <ComicInfo comicData={this.state.comicData} />
             <a target="_blank" href="https://www.xkcd.com/">
               <img
                 className="latestImage"
                 title={this.state.comicData.alt}
                 alt={this.state.comicData.title}
                 src={this.state.comicData.img}
-              ></img>
+              />
             </a>
           </>
         ) : null}

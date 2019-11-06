@@ -40,7 +40,7 @@ class Search extends Component {
   render() {
     return (
       <>
-        <Header></Header>
+        <Header />
         <form onSubmit={this.handleSubmit} className="searchForm">
           <input
             placeholder="Enter Comic #"
@@ -48,14 +48,14 @@ class Search extends Component {
             className="searchInput"
             type="text"
             value={this.state.searchText}
-          ></input>
+          />
           <button type="submit" className="searchSubmit">
             Search
           </button>
         </form>
         {!!this.state.comicData ? (
           <>
-            <ComicInfo comicData={this.state.comicData}></ComicInfo>
+            <ComicInfo comicData={this.state.comicData} />
             <a
               target="_blank"
               href={`https://www.xkcd.com/${this.state.comicData.num}/`}
@@ -65,7 +65,7 @@ class Search extends Component {
                 alt={this.state.comicData.title}
                 className="searchImage"
                 src={this.state.comicData.img}
-              ></img>
+              />
             </a>
           </>
         ) : null}
